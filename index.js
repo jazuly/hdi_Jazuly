@@ -1,10 +1,16 @@
-const guestPattern = function(value) {
+const guestPattern = async function(value) {
+    //Console default styleing
+    let baseStyles = [
+        "color: red",
+        "font-size: 30px"
+    ].join(';');
+    
     //Check Data
-    if(!(/^\d*$/).test(value)) return console.log('Invalid Data!');
-    if(value < -5) return console.log('Data too small!');
+    if(!(/^[\d-]*$/).test(value)) return console.log('%cInvalid Data!', baseStyles);
+    if(value < -5) return console.log('%cData too small!', baseStyles);
     if(value < 1) return console.log('');
-    if(value == 1) return console.log('x');
-    if(value > 20) return console.log('Data too big!');
+    if(value == 1) return console.log('%cx', "color:yellow;font-size:18px");
+    if(value > 20) return console.log('%cData too big!', baseStyles);
   
   	
     //Init variable
@@ -12,6 +18,9 @@ const guestPattern = function(value) {
     let text = '';
     let newText = '';
     let finalData = [];
+    
+    console.log("%c----------START----------", baseStyles)
+    await delay()
   
   
     //Create dot text
@@ -104,22 +113,34 @@ const guestPattern = function(value) {
     //Print First Floor
     for (let i=0; i< finalData.length; i++) {
       let fFloor = finalData[(finalData.length-1) - i];
-      console.log(fFloor.replaceAll('.', ' '))
+      await delay()
+      console.log(`%c${fFloor.replaceAll('.', ' ')}`, "color:burlywood;font-size:18px")
     }
   
   	
     //Replace all dot to space
     //Print Middle Floor
     let mFloor = text.replaceAll('.', ' ')
-    console.log(mFloor)
+    await delay()
+    console.log(`%c${mFloor}`, "color:yellow;font-size:18px")
   
   	//Convert string to array and reverse the string and convert it to string again
     //Replace all x,o,and dot to space
     //Print Second Floor
     for (let i=0; i< finalData.length; i++) {
       let sFloor = finalData[i].split("").reverse().join("");
-      console.log(newText.replace(/x|o|./gi, ' ').substr(1) +  sFloor.replaceAll('.', ' '))
+      await delay()
+      console.log(`%c${newText.replace(/x|o|./gi, ' ').substr(1) +  sFloor.replaceAll('.', ' ')}`, "color:hotpink;font-size:18px")
     }
+    
+    await delay()
+    console.log("%c----------DONE----------", baseStyles)
   }
   
-  guestPattern('15')
+  const delay = function() {
+   return new Promise(function(resolve) {
+   	setTimeout(resolve, 300)
+   })
+	}
+  
+  guestPattern("15")
