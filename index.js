@@ -1,12 +1,13 @@
 const guestPattern = function(value) {
-    //Check Data
+	//Check Data
     if(!(/^\d*$/).test(value)) return console.log('Invalid Data!');
     if(value < -5) return console.log('Data too small!');
     if(value < 1) return console.log('');
     if(value == 1) return console.log('x');
     if(value > 20) return console.log('Data too big!');
   
-  
+  	
+    //Init variable
     let hLoop = value * 2;
     let text = '';
     let newText = '';
