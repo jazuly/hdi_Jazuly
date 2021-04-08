@@ -142,5 +142,5 @@ const guestPattern = async function(value) {
    	setTimeout(resolve, 300)
    })
 }
-  
-  guestPattern("15")
+
+guestPattern("15")
