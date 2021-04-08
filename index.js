@@ -122,4 +122,4 @@ const guestPattern = function(value) {
     }
   }
   
-  guestPattern('10')
+  guestPattern('15')
