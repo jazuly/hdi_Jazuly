@@ -1,7 +1,7 @@
 # HDI Fullstack Test Jazuly
 
 ### Online Script
-[JSFiddle](https://jsfiddle.net/dqLonpaf/17/)
+[JSFiddle](https://jsfiddle.net/vp84sh2y/)
 
 #### Note
 > Open Console to see the result.
