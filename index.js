@@ -124,7 +124,7 @@ const guestPattern = async function(value) {
     await delay()
     console.log(`%c${mFloor}`, "color:yellow;font-size:18px")
   
-  	//Convert string to array and reverse the string and convert it to string again
+     //Convert string to array and reverse the string and convert it to string again
     //Replace all x,o,and dot to space
     //Print Second Floor
     for (let i=0; i< finalData.length; i++) {
