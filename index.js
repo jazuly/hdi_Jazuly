@@ -1,5 +1,5 @@
 const guestPattern = async function(value) {
-    //Console default styleing
+    //Console default styling
     let baseStyles = [
         "color: red",
         "font-size: 30px"
